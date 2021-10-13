@@ -14,16 +14,52 @@
 }
 
 .App-header {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  background-color: royalblue;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
 }
 
 .App-link {
   color: rgb(112, 76, 182);
+}
+
+.Title {
+  color: white;
+}
+
+.Content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-areas: "content";
+}
+
+.Sidebar {
+  display: none;
+  grid-area: "side";
+  text-align: left;
+  padding-left: 20px;
+}
+
+.Movie-section {
+  grid-area: "content";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 600px) {
+  .Content {
+    grid-template-areas: "side content";
+  }
+  .Sidebar {
+    display: block;
+  }
 }
 
 @keyframes App-logo-float {
@@ -36,4 +72,9 @@
   100% {
     transform: translateY(0px);
   }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
 }
