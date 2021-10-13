@@ -1,8 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
 import { FilterView, MovieGrid } from './features/movie/MovieGrid';
-import { Filter } from './features/filter/Filter'
 import './App.css';
 import { useEffect } from 'react';
 import { useAppDispatch } from './app/hooks'
